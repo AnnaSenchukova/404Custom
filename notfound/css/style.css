@@ -1,0 +1,170 @@
+.notfound {
+    width: 100%;
+
+    background-color: #ffffff;
+}
+
+.notfound__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 100%;
+    max-width: 470px;
+    margin: 0 auto;
+    padding: 40px 20px;
+
+    font-family: "Helvetica", "Arial", "sans-serif";
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 26px;
+    color: #283136;
+
+    background-color: transparent;
+}
+
+.notfound__wrapper-block {
+    width: 100%;
+}
+
+.notfound__title {
+    margin: 0;
+
+    font-size: 18px;
+    line-height: 30px;
+    color: #7cbae6;
+}
+
+.notfound__caption {
+    margin-bottom: 8px;
+
+    font-size: 14px;
+    color: #201f1f;
+}
+
+.notfound__list {
+    margin: 0;
+    padding-left: 20px;
+    list-style: none;
+}
+
+.notfound__link {
+    display: block;
+
+    color: #0a78cc;
+
+    text-decoration: none;
+}
+
+.notfound__link::before {
+    content: "";
+
+    display: inline-block;
+    vertical-align: middle;
+    width: 6px;
+    height: 6px;
+    margin-right: 10px;
+
+    background-color: #7cbae6;
+    border: 1px solid #7cbae6;
+    border-radius: 50%;
+}
+
+.notfound__link--myprofile {
+    position: relative;
+
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    width: 100%;
+    height: 250px;
+    padding-left: 40px;
+
+    color: #ac5c51;
+
+    background-image: url("../img/octocat.png");
+    background-repeat: no-repeat;
+    background-position: 50% 100%;
+    background-size: 267px 220px;
+}
+
+.notfound__link--myprofile::before {
+    content: "";
+
+    position: absolute;
+    top: 10px;
+    left: 20px;
+
+    display: block;
+
+    background-color: #ac5c51;
+    border-color: #ac5c51;
+}
+
+.notfound__link:hover,
+.notfound__link:focus {
+    color: #7cbae6;
+
+    outline: none;
+}
+
+.notfound__link:active {
+    color: #201f1f;
+}
+
+.notfound__link:hover::before,
+.notfound__link:focus::before {
+    background-color: #7cbae6;
+    border-color: #7cbae6;
+}
+
+.notfound__link:active::before {
+    background-color: #201f1f;
+    border-color: #201f1f;
+}
+
+
+@media screen and (min-width: 760px) {
+    .notfound__wrapper {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+
+        justify-content: space-between;
+        max-width: 960px;
+        padding: 10px;
+
+        font-size: 16px;
+        line-height: 26px;
+
+        transform: translate(-50%, -50%);
+    }
+
+    .notfound__wrapper-block {
+        order: 2;
+        width: 70%;
+    }
+
+    .notfound__title {
+        font-size: 26px;
+        line-height: 36px;
+    }
+
+    .notfound__caption {
+        font-size: 16px;
+    }
+
+    .notfound__link--myprofile {
+        align-items: flex-end;
+        justify-content: center;
+        width: 30%;
+        height: auto;
+        padding-left: 0;
+
+        background-size: contain;
+        background-position: 0 50%;
+    }
+
+    .notfound__link--myprofile::before {
+        display: none;
+    }
+}
